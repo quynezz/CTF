@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TBFC — Staff Portal</title>
+<style>
+  :root{
+    --card-bg:#1C2538;
+    --page-a:#1C2538;
+    --page-b:#1C2538;
+    --accent:#A3EA2A;
+    --muted:#A3EA2A;
+  }
+  html,body{height:100%;margin:0;font-family:"Source Sans Pro","Ubuntu",sans-serif;background:#1C2538;color:#A3EA2A}
+  .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:36px;position:relative;overflow:hidden}
+
+  /* subtle snow */
+  .snow{pointer-events:none;position:absolute;inset:0;z-index:0}
+  .snow i{position:absolute;top:-10%;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.95);box-shadow:0 0 6px rgba(255,255,255,0.12);animation:fall linear infinite;opacity:0.95}
+  .snow i:nth-child(1){left:5%;animation-duration:13s}
+  .snow i:nth-child(2){left:18%;animation-duration:17s;transform:scale(0.7)}
+  .snow i:nth-child(3){left:32%;animation-duration:14s}
+  .snow i:nth-child(4){left:46%;animation-duration:20s;transform:scale(0.8)}
+  .snow i:nth-child(5){left:60%;animation-duration:18s}
+  .snow i:nth-child(6){left:74%;animation-duration:15s;transform:scale(0.6)}
+  .snow i:nth-child(7){left:88%;animation-duration:21s}
+  @keyframes fall{0%{transform:translateY(-10vh)}100%{transform:translateY(110vh) translateX(30px)}}
+
+  .card{position:relative;z-index:2;background:var(--card-bg);padding:26px;border-radius:12px;box-shadow:0 16px 36px rgba(15,23,42,0.08);width:440px;max-width:96%}
+  .header{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+  .logo{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+  .brand h2{margin:0;font-size:18px}
+  .brand p{margin:0;font-size:12px;color:var(--muted)}
+  .lead{margin:8px 0 12px;color:#A3EA2A;font-size:13px}
+  label{font-size:12px;color:#A3EA2A;display:block;margin-top:6px}
+  input{width:100%;padding:11px;margin:8px 0 12px;border:1px solid #e6eef8;border-radius:10px;box-sizing:border-box;font-size:14px}
+  button{width:100%;padding:12px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:#fff;border:none;border-radius:10px;cursor:pointer;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  button:disabled{opacity:0.85;cursor:not-allowed}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+  .muted{color:var(--muted);font-size:12px}
+  .lab-footer{position:relative;z-index:2;margin-top:14px;text-align:center;font-size:11px;color:#6b7280;opacity:0.95}
+
+  /* spinner */
+  .spinner{
+    width:14px;height:14px;border:2px solid rgba(255,255,255,0.5);border-top-color:#ffffff;border-radius:50%;animation:spin .8s linear infinite;display:inline-block;vertical-align:middle;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  @media (max-width:520px){.card{padding:18px}.logo{width:46px;height:46px}}
+</style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="portalTitle">
+    <div class="snow" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="card" aria-describedby="labNote">
+      <div class="header">
+        <div class="logo" style="background:#1C2538;">
+          <!-- inline new icon -->
+          <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portal">
+            <path fill="none" stroke="#A3EA2A" stroke-width="2" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+          </svg>
+        </div>
+
+        <div class="brand">
+          <h2 id="portalTitle" style="font-weight:normal;">TBFC Staff Portal</h2>
+          <p class="muted">SOCMAS Operations — Re-authentication</p>
+        </div>
+      </div>
+
+      <p class="lead">Please re-authenticate to apply the latest delivery manifest changes.</p>
+
+      <!-- ACTION TARGETS THE LOCAL LAB SERVER -->
+      <form id="loginForm" action="/submit" method="post" autocomplete="off" novalidate>
+        <input id="u" name="username" placeholder="Email or username" required autocomplete="username" />
+        <input id="p" name="password" type="password" placeholder="Password" required autocomplete="current-password" />
+        <button id="btn" type="submit" aria-live="polite" style="background:#1C2538;border:2px solid #A3EA2A;color:#A3EA2A;"><span id="btn-text">Sign in</span></button>
+      </form>
+
+      <div class="meta">
+        <div class="muted">Need help? Contact SOCMAS ops desk</div>
+        <div style="font-weight:normal;font-size:10px;color:#A3EA2A">v2.1</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // UX: show spinner and realistic delay, then perform a real POST to /submit.
+  (function(){
+    const form = document.getElementById('loginForm');
+    const btn = document.getElementById('btn');
+    const pwd = document.getElementById('p');
+
+    form.addEventListener('submit', function(e){
+      // block default immediate submit so we can show the spinner, but we'll call form.submit()
+      e.preventDefault();
+
+      // disable controls, show spinner text
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Signing in...';
+
+      // short, believable delay, then submit to /submit
+      setTimeout(() => {
+        // NOTE: this will perform the real browser POST to /submit (server.py must be running)
+        // clear password from DOM immediately after triggering submit to avoid leaving it in UI (browser will send it)
+        form.submit();
+        // password field will be cleared by server response / page reload. For safety, clear after a tiny delay:
+        setTimeout(() => { if (pwd) pwd.value = ''; }, 300);
+      }, 700);
+    });
+
+    // convenience: Enter in username triggers same UX
+    document.getElementById('u').addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter') { ev.preventDefault(); form.dispatchEvent(new Event('submit', {cancelable:true})); }
+    });
+  })();
+</script>
+</body>
+</html>
+
+
