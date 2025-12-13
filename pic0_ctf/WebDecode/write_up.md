@@ -3,7 +3,7 @@
 
 ## Challenge Description
 
-*Do you know how to use the ***web inspector* ?
+*Do you know how to use the ***web inspector** ?
 Additional details will be available after launching your challenge instance.*
 
 ## Solution
