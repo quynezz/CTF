@@ -27,7 +27,7 @@ Sau khi chèn xong ta gửi request và nhận được response:
 
 ![cipher_hint_5](./image/image_5.jpg)
 
-**FLAG: picoCTF{brut4_f0rc4_b3a957eb}**
+**🏴󠁧󠁢󠁷󠁬󠁳󠁿FLAG: picoCTF{brut4_f0rc4_b3a957eb}**
 
 
 
