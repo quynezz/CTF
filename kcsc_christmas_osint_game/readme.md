@@ -139,7 +139,7 @@ Part 5: d1_ch0l_n03l_:3}
 VÀ GHÉP TẤT CẢ LẠI TA ĐƯỢC FLAGGGGGGG 👇👇👇
 
 ```bash
-Part 5: KSCS{cHuC_C4c_b4n_614n6_51nh_Vu1_v3_l3u_l3U_m4y_b4n_kh0n6_c0_nyd1_ch0l_n03l_:3}
+KSCS{cHuC_C4c_b4n_614n6_51nh_Vu1_v3_l3u_l3U_m4y_b4n_kh0n6_c0_nyd1_ch0l_n03l_:3}
 ```
 
 Nếu các bạn thấy hay thì đừng ngần ngại để lại một star cho mình nhé :333 xin cảm ơn
