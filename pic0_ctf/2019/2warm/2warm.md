@@ -4,4 +4,4 @@
 # convert automatically in bash command and yank it into clipboard
 echo "picoCTF{$(obase=2; 42) | bc}" | xlip
 ```
-**Flag**: picoCTF{101010}
+**Flag**: `picoCTF{101010}`
