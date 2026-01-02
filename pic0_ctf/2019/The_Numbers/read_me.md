@@ -12,11 +12,11 @@ Write it in a `the_numbers.txt` file and use the below command the split the ' '
 
 `sed -i 's/ /"\n"/g' the_numbers.txt`
 
+![image](./the_numbers.png)
+
 but it seem like ascii number but being modify by some math formula 
 
 `real_number = 97 + (current_number - 1)`
-
-![image](./the_numbers.png)
 
 ```bash
 #!/bin/bash
