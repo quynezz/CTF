@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in $(cat the_number.txt); do
+for i in $(cat the_numbers.txt); do
 	# Check if the input is a number (integer)
 	if [[ "$i" =~ ^[0-9]+$ ]]; then
 		res=$((97 + i -1))
