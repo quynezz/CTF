@@ -16,7 +16,7 @@ but it seem like ascii number but being modify by some math formula
 
 `real_number = 97 + (current_number - 1)`
 
-[image](./the_numbers.png)
+![image](./the_numbers.png)
 
 ```bash
 #!/bin/bash
