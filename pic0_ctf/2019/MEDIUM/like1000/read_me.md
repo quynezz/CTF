@@ -42,7 +42,7 @@ done
 
 echo "Final extraction complete."
 ```
-`Untar` it till the end and we will find a `flag.png`, open it 
+`Untar` it till it reach 1 and no other tar file left and we will find a `flag.png`, open it 
 
 ```bash
 eog flag.png
