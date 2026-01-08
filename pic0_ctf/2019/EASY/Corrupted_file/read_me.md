@@ -2,7 +2,7 @@
 
 **Topic:** Forensic
 
-First we need to download the image from the problem first 
+First we need to download the image from the problem first.
 
 ```bash
 wget https://challenge-files.picoctf.net/c_amiable_citadel/8646393bf40c0026e51065e57963b604edf0a9a73371e01d1af2865c050d3e68/file
