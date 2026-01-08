@@ -9,7 +9,7 @@ First we need to download the `zip` file from the problem first
 ```bash
 wget https://artifacts.picoctf.net/c_atlas/15/challenge.zip
 ```
-Unzip the file:
+Unzip the file
 
 ```bash 
 unzip challenge.zip
