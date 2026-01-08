@@ -18,6 +18,6 @@ Using the next step of every forensics problem that i would repeatedly do :)
 ```bash 
 strings disko-1.dd | grep -oE "picoCTF{.*}"
 ```
-And we actually found theflag: 
+And we actually found the flag: 
 
 **Flag:** `picoCTF{1t5_ju5t_4_5tr1n9_be6031da}`

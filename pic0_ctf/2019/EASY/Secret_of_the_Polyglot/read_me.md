@@ -7,7 +7,7 @@ First we need to download the image from the problem first
 ```bash
 wget https://artifacts.picoctf.net/c_titan/9/flag2of2-final.pdf
 ```
-The title emphasise the main keyword here :) -> **CONFLICTING INFORMATION ON WHAT TYPE OF FILE IT IS" 
+The title emphasise the main keyword here :) -> **CONFLICTING INFORMATION ON WHAT TYPE OF FILE IT IS"**
 
 So first and formost, i check the type of file eventhough it have `pdf` suffix :)
 
