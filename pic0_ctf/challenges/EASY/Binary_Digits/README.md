@@ -14,4 +14,4 @@ found the flag
 ```
 ![flag](./main/digits_reversed.jpg)
 
-FLAG: `picoCTF[h1dd3n_1n_th3_b1n4ry_3d2e65ba]`
+FLAG: `picoCTF{h1dd3n_1n_th3_b1n4ry_3d2e65ba}`
